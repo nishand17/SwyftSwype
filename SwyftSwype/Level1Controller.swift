@@ -24,7 +24,7 @@ class Level1Controller : UIViewController {
         swipeRight.direction = UISwipeGestureRecognizerDirection.Right
         self.view.addGestureRecognizer(swipeRight)
         
-        let swipeDown = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(Level1Controller.respondToSwipeGesture(_:)))
         swipeDown.direction = UISwipeGestureRecognizerDirection.Down
         self.view.addGestureRecognizer(swipeDown)
         
@@ -131,28 +131,40 @@ class Level1Controller : UIViewController {
         switch(colorNum) {
         case 0: self.view.backgroundColor = UIColor.blueColor()
             self.output.text = "";
+        break;
         case 1: self.view.backgroundColor = UIColor.redColor()
             self.output.text = "";
+        break;
         case 2: self.view.backgroundColor = UIColor.greenColor()
             self.output.text = "";
+        break;
         case 3: self.view.backgroundColor = UIColor.yellowColor()
             self.output.text = "";
+            break;
         case 4: self.view.backgroundColor = UIColor.redColor()
             self.output.text = "";
+            break;
         case 5: self.view.backgroundColor = UIColor.blueColor()
             self.output.text = "";
+            break;
         case 6: self.view.backgroundColor = UIColor.redColor()
             self.output.text = "";
+            break;
         case 7: self.view.backgroundColor = UIColor.greenColor()
             self.output.text = "";
+            break;
         case 8: self.view.backgroundColor = UIColor.blueColor()
             self.output.text = "";
+            break;
         case 9: self.view.backgroundColor = UIColor.yellowColor()
             self.output.text = "";
+            break;
         case 10: self.view.backgroundColor = UIColor.blueColor()
             self.output.text = "";
+            break;
         case 11: self.view.backgroundColor = UIColor.yellowColor()
             self.output.text = "";
+            break;
             
         default: break;
         }
