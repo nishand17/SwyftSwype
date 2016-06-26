@@ -20,19 +20,19 @@ class Level1Controller : UIViewController {
         super.viewDidLoad()
         self.output.text = "";
         // Do any additional setup after loading the view, typically from a nib.
-        var swipeRight = UISwipeGestureRecognizer(target: self, action:"respondToSwipeGesture:")
+        var swipeRight = UISwipeGestureRecognizer(target: self, action:#selector(Level1Controller.respondToSwipeGesture(_:)))
         swipeRight.direction = UISwipeGestureRecognizerDirection.Right
         self.view.addGestureRecognizer(swipeRight)
         
-        var swipeDown = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
         swipeDown.direction = UISwipeGestureRecognizerDirection.Down
         self.view.addGestureRecognizer(swipeDown)
         
-        var swipeLeft = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
+        var swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(Level1Controller.respondToSwipeGesture(_:)))
         swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
         self.view.addGestureRecognizer(swipeLeft)
         
-        var swipeUp = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
+        var swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(Level1Controller.respondToSwipeGesture(_:)))
         swipeUp.direction = UISwipeGestureRecognizerDirection.Up
         self.view.addGestureRecognizer(swipeUp)
         
